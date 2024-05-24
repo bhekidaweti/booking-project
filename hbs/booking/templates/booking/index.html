@@ -1,0 +1,13 @@
+{% extends "booking/main.html" %}
+
+{% block title %}Hotel-Guest House{% endblock %}
+
+{% block content %}
+
+<div class="card mt-5">
+    <div class="card-body">
+        <a href="{% url 'booking_create' %}" class="btn btn-primary mt-3">Make a Booking</a>
+    </div>
+</div>
+
+{% endblock %}

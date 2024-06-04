@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'booking.apps.BookingConfig'
+    'booking.apps.BookingConfig',
+    'phonenumber_field'
 ]
 
 MIDDLEWARE = [
@@ -87,6 +88,13 @@ DATABASES = {
     }
 }
 
+#E-mail settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtppro.zoho.com'  # For zoho
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'admin@bheki.co.uk'
+EMAIL_HOST_PASSWORD = 'Toivoj@toivo1'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

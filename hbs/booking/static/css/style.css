@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .card {
     display: flex;
     justify-content: center;
@@ -5,4 +9,14 @@
     flex-wrap: wrap;
     font-family: "Lucida Console", "Courier New", monospace;
     
+}
+
+.footer{
+  margin: 100px;
+  background-color: #d4ca3e;
+}
+
+.footer li {
+  list-style: none;
+  display: inline-block;
 }

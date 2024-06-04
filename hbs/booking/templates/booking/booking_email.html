@@ -1,0 +1,17 @@
+{% extends "booking/main.html" %}
+
+{% block title %}Booking Confirmation{% endblock %}
+
+{% block content %}
+
+<h2>Booking Details</h2>
+<p><strong>Name:</strong> {{ booking.name }}</p>
+<p><strong>Email:</strong> {{ booking.email }}</p>
+<p><strong>Phone Number:</strong> {{ booking.phone_number }}</p>
+<p><strong>Check In:</strong> {{ booking.check_in }}</p>
+<p><strong>Check Out:</strong> {{ booking.check_out }}</p>
+<p><strong>Room Type:</strong> {{ booking.room_type }}</p>
+
+
+
+{% endblock %}

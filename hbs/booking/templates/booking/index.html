@@ -4,10 +4,29 @@
 
 {% block content %}
 
-<div class="card mt-5">
-    <div class="card-body">
-        <a href="{% url 'booking_create' %}" class="btn btn-primary mt-3">Make a Booking</a>
+{% load static %}
+
+<div class="container text-center">
+  <div class="row align-items-center">
+    <div class="col">
+      <img src="{% static 'images/guest.jpg' %}" alt="guesthouse" style="width: 300px; height: 300px;">
     </div>
+    <div class="col">
+      <img src="{% static 'images/guest1.jpg' %}" alt="guesthouse" style="width: 300px; height: 300px;">
+    </div>
+    <div class="col">
+      <img src="{% static 'images/guest2.jpg' %}" alt="guesthouse" style="width: 300px; height: 300px;">
+    </div>
+    <div class="col">
+      <img src="{% static 'images/guest3.jpg' %}" alt="guesthouse" style="width: 300px; height: 300px;">
+    </div>
+  </div>
 </div>
+
+  <div class="card mt-5">
+        <div class="card-body">
+        <a href="{% url 'booking_create' %}" class="btn btn-primary mt-3">Make a Booking</a>
+        </div>
+  </div>
 
 {% endblock %}

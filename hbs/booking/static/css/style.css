@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 .card {
     display: flex;
     justify-content: center;
@@ -19,4 +20,19 @@
 .footer li {
   list-style: none;
   display: inline-block;
+}
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
 }

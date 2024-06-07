@@ -20,19 +20,13 @@ def booking_create(request):
             messages.success(request, 'Your booking was successful!')
 
             # Send email to admin
-            subject = 'New Booking Created'
-            message = f'A new booking has been made by {booking.name}.\n\n' \
-                      f'Details:\n' \
-                      f'Name: {booking.name}\n' \
-                      f'Email: {booking.email}\n' \
-                      f'Phone: {booking.phone_number}\n' \
-                      f'Check-in: {booking.check_in}\n' \
-                      f'Check-out: {booking.check_out}\n' \
-                      f'Room type: {booking.room_type}\n' \
-                      f'Number of guests: {booking.number_of_guests}'
-            email_from = settings.EMAIL_HOST_USER
-            recipient_list = ['admin_email@example.com']
-            send_mail(subject, message, email_from, recipient_list)
+            send_mail(
+                'New booking', 
+                'You have a new booking',
+                settings.DEFAULT_FROM_EMAIL,
+                ['bheki.daweti@gmail.com'],
+                fail_silently=False,
+            )
 
             return redirect('index')
     else:
